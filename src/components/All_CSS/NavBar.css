@@ -1,0 +1,283 @@
+
+
+.nav_container{
+    position:absolute;
+    top: 0;
+    left: 0;
+    padding:0rem 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: white;
+    z-index: 2;
+}
+
+.nav_container .finunity_logo{
+    width:80px;
+}
+
+.nav_container a{
+    &:active{
+        color: rgb(0, 38, 255);
+    }
+    text-decoration: none;
+    color: white;
+}
+
+.site_name_nav{
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    margin: 0;
+}
+
+.nav_navigation_container{
+    position: relative;
+    display: flex;
+    gap: 2rem;    
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    /* background-image: linear-gradient( 111.4deg, rgb(88, 79, 255)  6.5%,  rgb(26, 26, 57) 93.2% ); */
+   background-color: rgb(0, 0, 0);
+
+    &::before{
+        content: "";
+        width: 100.5%;
+        height: 106%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: white;
+        z-index: -1;
+        background:rgb(196, 70, 255);
+        background: linear-gradient(90deg, rgb(196, 70, 255) 0%, rgba(146,255,248,1) 94%);    }
+}
+
+
+.nav_navigation_container hr{
+    display: none;
+    width: 100%;
+    border: none; 
+    height: 0.05rem; 
+    background: radial-gradient(circle, rgb(124, 224, 255) 18%, rgb(9, 27, 66) 100%);
+}
+
+.nav_navigation {
+    cursor: pointer; 
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.nav_container img{
+    width:8rem;
+    height: auto;
+}
+
+.Nav_Button_container{
+display: flex;
+gap: 1rem;
+}
+
+
+.Nav_Button_container .signIn_button , .Nav_Button_container .signUp_button{
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius:0.3rem;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    background: rgb(173,201,255);
+    background: linear-gradient(143deg, rgba(173,201,255,1) 0%, rgba(57,124,255,1) 59%, rgba(157,60,255,1) 100%);
+
+    &:hover{
+        cursor: pointer;
+        background:black;
+    }
+
+}
+
+
+.Nav_Button_container .signIn_button span , .Nav_Button_container .signUp_button span{
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 115%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius:0.4rem;
+    z-index: -1;
+    overflow: hidden;
+    background: rgb(173,201,255);
+    background: linear-gradient(143deg, rgba(173,201,255,1) 0%, rgba(57,124,255,1) 59%, rgba(157,60,255,1) 100%);
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 170%;
+        height: 100%;
+        background: rgb(57,124,255);
+        background: linear-gradient(90deg, rgb(255, 57, 57) 0%, rgb(0, 4, 255) 94%);      
+         
+        animation: btn_border_animate 4s infinite reverse ease-in-out;
+    }
+}
+
+
+@keyframes btn_border_animate {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+
+
+.nav_container .toggle_nav_button{
+display: none;
+}
+
+.nav_container .toggle_nav_button img{
+    width: 1.7rem;
+}
+
+
+
+/* tab responsive  */
+
+@media (max-width:980px) {
+    .nav_navigation_container{
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .Nav_Button_container .signIn_button , .Nav_Button_container .signUp_button{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:800px) {
+    .nav_navigation_container{
+        gap: 1rem;
+        font-size: 0.6rem;
+    }
+}
+
+
+
+
+
+/* mobile responsive  */
+
+@media (max-width:690px) {
+    .nav_container{
+        padding:0.5rem 2rem;
+        background-color: rgba(0, 0, 0, 0.422);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav_navigation {
+        width: 100%;
+        text-align: center;
+       
+    }
+
+    .Nav_Button_container{
+        display: flex;
+        gap:1rem;
+    }
+
+    .nav_navigation_container hr{
+        display:block;
+    }
+
+    .nav_container .toggle_nav_button{
+        display: block;  
+    }
+
+    /* .nav_container .signIn_button{
+        display: none;
+    } */
+
+    .navIsHidden{
+        display: none;
+        left:100%;
+    }
+    .nav_navigation_container{
+        position: absolute;
+        top:100%;
+        right:0%;
+        height: fit-content;
+        width:90%;
+        font-size: 0.8rem;
+        padding-left: 0.5rem;
+        padding-right:2rem;
+        padding-top: 0.5rem;
+        padding-bottom:0.5rem;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items:start;
+        gap: 0.3rem;
+        background-color: rgba(0, 0, 0, 0.954);
+        border: solid 2px rgba(52, 123, 255, 0.612);
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        z-index: 99;
+    }  
+
+}
+
+@media (max-width:516px) {
+    .nav_container{
+        padding:0.3rem 1rem;
+    }
+
+    .nav_container .finunity_logo{
+        width:4rem;
+    }
+
+    .Nav_Button_container .signIn_button , .Nav_Button_container .signUp_button{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: 0.6rem;
+    }
+}
+
+
+@media (max-width:350px) {
+    .nav_container{
+        padding:0.5rem 0.5rem;
+    }
+    .nav_container .finunity_logo{
+        width:3rem;
+    }
+
+    .Nav_Button_container .signIn_button , .Nav_Button_container .signUp_button{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: 0.6rem;
+    }
+}

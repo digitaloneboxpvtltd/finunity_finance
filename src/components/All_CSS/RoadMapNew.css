@@ -1,0 +1,256 @@
+
+.RoadMapSection_page{
+    width: 100%;
+    
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+
+
+.RoadMapSection_page .roadmap_heading{
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+  
+  
+.RoadMapSection_page .roadmap_heading span{
+    background: linear-gradient(100deg,#AD00FF 30%, #92FFF8 75%);
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+    .RoadMapSection_page .Roadmap_main{
+        width: 100%;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,0%);
+            width: 15px;
+            height: 90%;
+            background-color:rgba(0, 5, 160, 0.241);
+            box-shadow: inset 0 0 5px 3px rgba(255, 255, 255, 0.253);
+            border-radius: 1rem;
+        }
+    }
+
+    .Roadmap_main .progress{
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        width: 15px;
+        height: 90%;
+        background: linear-gradient(180deg, rgba(238, 116, 226, 0.652) 0%, rgba(62, 236, 172, 0.547) 100%);
+        border-radius: 1rem;
+    }
+
+
+    .Roadmap_main .roadmap_point_box{
+        position: relative;
+        width: 50%;
+        display: flex;
+        margin-bottom: 4rem;
+    }
+
+    .Roadmap_main .right_side{
+        left: 0;
+        justify-content: end;
+        padding-right: 2rem;
+    }
+
+    .Roadmap_main .left_side{
+        left: 50%;
+        padding-left: 2rem;
+
+    }
+
+    .roadmap_point_box .content_box{
+        width: 100%;
+        padding:2rem;
+        background-color: rgb(21, 21, 21);
+        background: linear-gradient(180deg, rgba(238, 116, 226, 0.187) 0%, rgba(62,236,172,0.187) 100%);
+        backdrop-filter: blur(10px);
+        position: relative;
+        border-radius: 1rem;
+        color: white;
+        box-shadow: inset 0 0 10px 5px rgba(52, 52, 52, 0.836);
+    }
+ 
+
+     .right_side .point_num{
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            transform: translate(-50%,0%);
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            width: 40px;
+            height:40px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgb(157, 0, 255) 0%, rgb(121, 246, 255) 100%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+    }
+
+    .left_side .point_num{
+            position: absolute;
+            top: 0%;
+            left:0%;
+            transform: translate(-50%,0%);
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            width: 40px;
+            height:40px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgb(121, 246, 255) 0%, rgb(157, 0, 255) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+    }
+
+    /* .content_box .point_num{
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 1.1rem;
+        font-weight: 700;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(162deg, rgba(208,209,255,1) 0%, rgba(96,98,192,1) 15%, rgba(9,16,255,1) 61%, rgb(0, 3, 75) 94%);   
+     } */
+
+
+     .content_box p{
+        width: 90%;
+        font-size: 1.3rem;
+        font-weight: 600;
+     }
+
+     .content_box ul{
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(207, 207, 207);
+     }
+     .content_box ul li{
+       margin-bottom: 0.5rem;
+     }
+
+     .content_box ul span{
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+     }
+
+
+
+
+     @media (max-width:800px) {
+
+        .RoadMapSection_page .Roadmap_main{
+            &::before{
+                top: 0%;
+                left: 5%;
+            }
+        }
+
+        .Roadmap_main .progress{
+            left: 5%;
+        }
+
+        .Roadmap_main .roadmap_point_box{
+            width:95%;
+            margin-bottom: 3rem;
+        }
+    
+        .Roadmap_main .right_side{
+            left: 5%;
+            justify-content: end;
+            padding-left: 2rem;
+            padding-right: 0;
+    
+        }
+
+        .Roadmap_main .left_side{
+            left: 5%;
+            padding-left: 2rem;
+        }
+    
+
+        .right_side .point_num{
+            left: 0%;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 50%;
+        }
+
+     }
+
+
+
+    @media (max-width:560px) {
+        .RoadMapSection_page .roadmap_heading{
+            font-size: 1.5rem;
+        }
+
+        .content_box ul{
+            padding: 0.8rem;
+            font-size: 1rem;
+        }
+
+
+        .RoadMapSection_page .Roadmap_main{
+            &::before{
+                top: 0%;
+                left: 2%;
+            }
+        }
+
+        .Roadmap_main .progress{
+            left: 2%;
+        }
+
+        .roadmap_point_box .content_box{
+            padding:2rem;
+            padding-right: 0.5rem;
+        }
+
+        .Roadmap_main .right_side{
+            left: 2%;
+            justify-content: end;
+            padding-left:2rem;
+            padding-right: 0;
+    
+        }
+
+        .Roadmap_main .left_side{
+            left: 2%;
+            padding-left:2rem;
+        }
+    }

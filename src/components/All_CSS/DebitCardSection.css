@@ -1,0 +1,125 @@
+.debitCardSection_page{
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+        width:1px;
+        height: 1px;
+        border-radius: 50%;
+
+        background-color: #ba74ff43;
+        box-shadow: 0 0 200px 150px #ba74ff43;
+        z-index: -1;
+    }
+
+}
+
+.debitCardSection_page .debitCard_img{
+    width: 35%;
+}
+
+.debitCardSection_page .debitCardInfo_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: start;
+}
+
+
+.debitCardInfo_container .debitInfo_heading{
+    font-size:2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.debitCardInfo_container .debitInfo_heading span{
+    background: linear-gradient(100deg,#AD00FF 30%, #92FFF8 75%);
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.debitCardInfo_container p,.debitCardInfo_container li{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(196, 196, 196);
+    margin-bottom: 0.5rem;
+}
+
+.debitCardInfo_container ul span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+
+@media (max-width:800px) {
+    .debitCardSection_page{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &::before{
+            top: 80%;
+            left: 50%;
+        }
+    }    
+
+    .debitCardSection_page .debitCard_img{
+        width: 40%;
+    }
+
+
+    .debitCardSection_page .debitCardInfo_container{
+        align-items: center;
+    }
+    
+    
+    .debitCardInfo_container .debitInfo_heading{
+        text-align: center;
+        width: fit-content;
+    }
+
+}
+
+
+
+@media (max-width:550px){
+
+    .debitCardSection_page{
+        margin-bottom: 4rem;
+        &::before{
+            top: 90%;
+            box-shadow: 0 0 100px 90px #ba74ff43;
+        }
+    } 
+
+    .debitCardSection_page .debitCard_img{
+        width: 50%;
+    }
+
+    .debitCardInfo_container .debitInfo_heading{
+        font-size: 1.5rem;
+    }
+    .debitCardInfo_container p,.debitCardInfo_container li{
+        font-size: 0.9rem;
+    }
+
+    .debitCardInfo_container ul span{
+        font-size: 0.9rem;
+    }
+}

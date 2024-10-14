@@ -1,0 +1,96 @@
+.stepBox{
+    width:24%;
+    height: 15rem;
+    border: 1px white solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0.7rem;
+    padding:2.5rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    border-radius: 1rem;
+    background: rgba(238, 116, 226, 0.187);
+    background: linear-gradient(180deg, rgba(238, 116, 226, 0.187) 0%, rgba(62,236,172,0.187) 100%);
+    backdrop-filter: blur(5px);   
+
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.stepBox img{
+    position: absolute;
+    width: 4rem;
+    border-radius: 50%;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.stepBox h2{
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(100deg,#AD00FF 30%, #92FFF8 75%);
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.stepBox h4{
+font-size: 1.1rem;  
+}
+
+.stepBox p{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(205, 205, 205);
+}
+
+
+.stepBox_anim{
+    animation-name:box_anim ;
+    animation-duration:0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;    
+    
+}
+
+@keyframes box_anim {
+   to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width:900px) {
+    .stepBox{
+        width: 40%;
+        height: 15rem;
+        text-align: center;
+    }
+}
+
+
+@media (max-width:560px) {
+
+    .stepBox p{
+        font-size: 0.9rem;
+    }
+    .stepBox h2{
+        font-size: 1.3rem;
+    }
+    .stepBox h4{
+        font-size: 1.1rem;  
+        }
+    .stepBox{
+        width: 90%;
+        height:fit-content;
+        text-align: center;
+        
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}

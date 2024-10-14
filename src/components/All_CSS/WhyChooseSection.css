@@ -1,0 +1,224 @@
+
+.WhyChooseSection_page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 90%;
+        left: 5%;
+        width:1px;
+        height: 1px;
+        border-radius: 50%;
+
+        background-color: #3f6d6f;
+        box-shadow: 0 0 300px 150px #3f6d6f;
+
+        z-index: -2;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 95%;
+        width:1px;
+        height: 1px;
+        border-radius: 50%;
+
+        background-color:#ba74ff43;
+        box-shadow: 0 0 600px 150px  #ba74ff43;
+        z-index: -2;
+    }
+}
+
+.WhyChooseSection_page .Heading_container{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.WhyChooseSection_page .Heading_container h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.WhyChooseSection_page .Heading_container span{
+    background: linear-gradient(100deg,#AD00FF 30%, #92FFF8 75%);
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.WhyChooseSection_page .Heading_container p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(196, 196, 196);
+}
+
+.WhyChooseSection_page .ChooseUs_box_container{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+}
+
+
+/* social comminity join section */
+
+.join_community_section{
+    width: 95%;
+    height:23rem;
+    position: relative;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 4rem;
+    border: 2px solid #ab66ff;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:start;
+    gap: 0.5rem;
+
+}
+
+.join_community_section .poster_pc_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.join_community_section .poster_mobile_img{
+    display: none;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+
+.join_community_section .info_container{
+    width: 100%;
+}
+
+.join_community_section .info_container h2{
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.join_community_section .info_container p{
+    width: 40%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(230, 230, 230);
+    margin-bottom: 1rem;
+}
+
+.join_community_section .social_media_icons{
+    width: fit-content;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.join_community_section .social_media_icons img{
+    width: 2.5rem;
+}
+
+
+
+
+@media (max-width:700px) {
+    
+    
+.join_community_section{
+    height:40rem;
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+    justify-content:start;
+}
+
+.join_community_section .poster_pc_img{
+    display: none;
+}
+
+
+.join_community_section .poster_mobile_img{
+    display:block;
+}
+
+
+.join_community_section .info_container p{
+    width: 100%;
+}
+
+}
+
+
+
+@media (max-width:560px) {
+    .WhyChooseSection_page{
+        gap: 2rem;
+        padding: 0 1rem;
+        margin-bottom: 4rem;
+       
+        &::after{
+            top: 20%;
+            box-shadow: 0 0 400px 150px  #ba74ff43;
+
+        }
+    }
+
+    .WhyChooseSection_page .ChooseUs_box_container{
+        gap: 1rem;
+    }
+
+    .join_community_section{
+        width: 100%;
+        height: 30rem;
+    }
+    
+    .join_community_section .info_container h2{
+        font-size: 1.5rem;
+    }
+    
+    .join_community_section .info_container p{
+        font-size: 0.9rem;
+    }
+    
+
+    .join_community_section .social_media_icons{
+        justify-content: start;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+}

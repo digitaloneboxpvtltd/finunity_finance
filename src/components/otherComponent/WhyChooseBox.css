@@ -1,0 +1,105 @@
+
+
+.WhyChooseBox{
+    position: relative;
+    overflow: hidden;
+    width:30%;
+    height:19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    border: 2px solid;
+    border-radius: 1.5rem;
+    background-color: #27283C;
+
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.2s linear;
+
+    &::before{
+        content: "";
+        position: absolute;
+
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        top: 100%;
+        left: 100%;
+        background-color: rgba(0, 0, 0, 0.29);
+        z-index:-1;
+        transition: all 0.7s linear;
+    }
+
+    &:hover{
+        scale: 1.05;
+        &::before{
+            width: 1000px;
+        height: 1000px;
+            top: -100%;
+            left: -100%;
+        }
+    }
+}
+
+.whyChooseBox_anim{
+    animation-name:Whybox_anim ;
+    animation-duration:0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;    
+}
+
+@keyframes Whybox_anim {
+   to{
+    transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.WhyChooseBox img{
+    width:4rem;
+}
+
+.WhyChooseBox h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.WhyChooseBox p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(205, 205, 205);
+}
+
+
+@media (max-width:880px) {
+    .WhyChooseBox{
+        width:45%;
+        height:20rem;
+    }
+}
+
+@media (max-width:600px) {
+    .WhyChooseBox{
+        width:95%;
+        height:fit-content;
+        gap: 1rem;
+    }
+
+    
+.WhyChooseBox img{
+    width:3rem;
+}
+
+.WhyChooseBox h2{
+    font-size: 1.1rem;
+}
+
+.WhyChooseBox p{
+    font-size: 0.9rem;
+}
+
+
+}

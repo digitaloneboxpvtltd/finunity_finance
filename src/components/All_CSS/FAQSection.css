@@ -1,0 +1,119 @@
+.FAQSection_page{
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 98%;
+        width:1px;
+        height: 1px;
+        border-radius: 50%;
+
+        background-color: #aa7a585d;
+        box-shadow: 0 0 400px 200px #aa7a585d;
+        z-index: -1;
+    }
+}
+
+
+
+.FAQSection_page .FAQSection_head{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.FAQSection_page .FAQSection_head h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.FAQSection_page .FAQSection_head p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(196, 196, 196);
+}
+
+
+.FAQSection_page .Quastion_container{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.FAQSection_page .Quastion_container details{
+    width: 100%;
+    cursor: pointer;
+}
+
+.FAQSection_page .Quastion_container summary{
+    display:flex;
+    justify-content: space-between;
+    font-size:1.5rem;
+    font-weight: 800;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(233, 233, 233, 0.365);
+    
+}
+
+
+.FAQSection_page .Quastion_container p{
+    font-size: 1rem;
+    font-weight: 600;
+    color:  rgb(196, 196, 196);
+}
+
+
+@media (max-width:560px) {
+
+    .FAQSection_page{
+        padding: 0 1rem;
+        margin-bottom: 5rem;
+        gap: 2rem;
+    
+        &::after{
+            background-color: #aa7a585d;
+            box-shadow: 0 0 100px 100px #aa7a585d;
+        }
+    }
+
+    
+.FAQSection_page .FAQSection_head h1{
+    font-size: 1.5rem;
+}
+
+.FAQSection_page .FAQSection_head p{
+    font-size: 0.9rem;
+}
+
+.FAQSection_page .Quastion_container{
+    width: 100%;
+    gap: 1rem;
+}
+    
+.FAQSection_page .Quastion_container summary{
+    font-size:1.1rem;
+}
+
+.FAQSection_page .Quastion_container p{
+    font-size: 0.9rem;
+}
+
+}
